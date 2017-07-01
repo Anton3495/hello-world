@@ -1,0 +1,52 @@
+
+public class Book {
+    String material;
+    String nameOfTheBook; 
+    int quantityOfPages; 
+    double priceOfTheBook; 
+    double criticsEvaluation; 
+    double ratio;
+
+    public Book(String material,String nameOfTheBook,int quantityOfPages,double priceOfTheBook,double criticsEvaluation ){ 
+        this.material =material ;
+        this.nameOfTheBook=nameOfTheBook;
+        this.quantityOfPages=quantityOfPages;
+        this.priceOfTheBook = priceOfTheBook;
+        this.criticsEvaluation=criticsEvaluation;
+        this.ratio=ratio;
+    }
+
+    public double calculationRatioOfPriceAndquality(double priceOgTheBook ,double criticsEvaluation){ 
+    	double ratio=priceOgTheBook/criticsEvaluation;
+    	return ratio;
+    }
+
+    public String toString() { 
+        return "Book{" +
+                "material='" + material + '\'' +
+                ", nameOfTheBook='" + nameOfTheBook + '\'' +
+                ", quantityOfPages=" + quantityOfPages +
+                ", priceOfTheBook=" + priceOfTheBook +
+                ", criticsEvaluation=" + criticsEvaluation +
+                '}';
+    }
+}
+
+
+
+public class App {
+    
+	public static void main(String[] args) {
+       
+		Book firsBook=new Book("paper", "java", 6, 5.0, 4.7);
+		
+        	System.out.println("criticsEvaluation = " + firsBook.calculationRatioOfPriceAndquality(firsBook.priceOfTheBook,firsBook.criticsEvaluation,firsBook.ratio));
+        	System.out.println(firsBook);
+        	
+        	
+        Book secondBook=new Book("cardboard", "sport", 9, 3.0, 6.07 );
+        
+        	System.out.println("criticsEvaluation = " + secondBook.calculationRatioOfPriceAndquality(secondBook.priceOfTheBook,secondBook.criticsEvaluation,secondBook.ratio));
+        	System.out.println(secondBook);
+    }
+}
