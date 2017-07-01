@@ -1,0 +1,32 @@
+public class Abiturient {
+
+    int age;
+    int visit;
+    boolean smart;
+    boolean rich;
+    String name;
+
+
+    Abiturient(int a, int v, boolean s, boolean r, String n) {
+
+        age = a;
+        visit = v;
+        smart = s;
+        rich = r;
+        name = n;
+
+    }
+
+    public int chance() {
+
+        if ((smart & rich) & (visit > 50 & visit < 100)) {
+            int chance = 100;
+            return chance;
+        } else if ((smart | rich) & (visit > 0 & visit < 50)) {
+            int chance = 50;
+        } else {
+            int chance = 0;
+            return chance;
+        }
+    }
+}
